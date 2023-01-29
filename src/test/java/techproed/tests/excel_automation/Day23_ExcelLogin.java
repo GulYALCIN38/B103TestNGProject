@@ -1,5 +1,6 @@
 package techproed.tests.excel_automation;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import techproed.pages.BlueRentalHomePage;
 
@@ -9,6 +10,7 @@ import techproed.utilities.Driver;
 import techproed.utilities.ExcelUtils;
 import techproed.utilities.ReusableMethods;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -64,7 +66,7 @@ public class Day23_ExcelLogin {
     }
 
     @Test
-    public void customerLogin() {
+    public void customerLogin() throws IOException {
         String path = "./src/test/java/resources/mysmoketestdata.xlsx";//  ./ onceki tum dosyalari icer! relatif path
         String nomDePage = "customer_info";
         //DATALARI Excelutis sinifindaki methotlar ile aliriz
@@ -84,8 +86,18 @@ public class Day23_ExcelLogin {
             ReusableMethods.waitFor(1);
 
 
+            ReusableMethods.verifyElementDisplayed(blueRentalHomePage.userID);
+            ReusableMethods.waitFor(1);
+
+            //her islem sonu ekran goruntusu aldik
+            ReusableMethods.getScreenshot("EkranGoruntusu");
+
+
+
+
 
         }
+
 
 
 
@@ -135,4 +147,8 @@ kullanici adini gir(excelden al)
 kullanici sifresini git(excelden al)
 login page login buttonuna tikla
      */
+    @AfterMethod
+    public void tearDown(){
+        Driver.closeDriver();
+    }
 }
