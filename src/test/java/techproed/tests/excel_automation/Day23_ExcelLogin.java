@@ -73,6 +73,8 @@ public class Day23_ExcelLogin {
         excelUtils=new ExcelUtils(path,nomDePage);
         //excel datalarini bir getdatalist() methot ile cekecegiz
         excelDatalari=excelUtils.getDataList();
+
+        System.out.println("excelDatalari = " + excelDatalari);
         //loop kullanarak datalari tek tek test case de kullan
         for (Map<String, String> data:excelDatalari){
 
@@ -81,6 +83,7 @@ public class Day23_ExcelLogin {
             blueRentalLoginPage.emailBox.sendKeys(data.get("username"));
             ReusableMethods.waitFor(1);
             blueRentalLoginPage.passwordBox.sendKeys(data.get("password"));
+
             ReusableMethods.waitFor(1);
             blueRentalLoginPage.loginButton.click();
             ReusableMethods.waitFor(1);
@@ -91,6 +94,7 @@ public class Day23_ExcelLogin {
 
             //her islem sonu ekran goruntusu aldik
             ReusableMethods.getScreenshot("EkranGoruntusu");
+
 
 
 

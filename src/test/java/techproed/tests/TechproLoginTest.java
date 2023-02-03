@@ -68,7 +68,7 @@ Collapse
     TechproLoginPage techproLoginPage=new TechproLoginPage();
     TechproHomePage techproHomePage=new TechproHomePage();
 
-    @Test
+    @Test(groups = "regretion-test")
     public void testName() {
         //https://testcenter.techproeducation.com/index.php?page=form-authentication
         //Page object Model kullanarak sayfaya giriş yapildigini test edin

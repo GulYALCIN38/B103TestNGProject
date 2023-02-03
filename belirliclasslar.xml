@@ -1,0 +1,23 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Suite1" verbose="1" >
+    <test name=" positif login test" >
+        <classes>
+            <class name="techproed.tests.smoketests.Day22_PositiveLoginTest" />
+        </classes>
+    </test>
+
+    <test name="negatif login test">
+        <classes>
+            <class name="techproed.tests.smoketests.Day22_NegativeLoginTest"/>
+
+        </classes>
+    </test>
+</suite>
+        <!-- https://testng.org/doc/documentation-main.html  bu adresten bize lazim olan xml i indiririz
+
+        class name yazmaya java nin hemen altindaki dosyadan baslariz-->
+
+        <!--Bu xml dosyasini Belirli CLASS LARI run etmek icin kullaniriz-->

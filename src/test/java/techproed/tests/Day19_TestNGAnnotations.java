@@ -69,7 +69,7 @@ public class Day19_TestNGAnnotations {
 
 
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "regretion-test")
     public void test7() {
         System.out.println("Test 7");
 
@@ -79,7 +79,7 @@ public class Day19_TestNGAnnotations {
         System.out.println("Test 2");
 
     }
-    @Test(enabled = false)// silmeye kiyamiyorum ama calisinca da gic bir seye yaramiyorsa..
+    @Test(enabled = false,groups = "regretion-test")// silmeye kiyamiyorum ama calisinca da gic bir seye yaramiyorsa..
     public void test3() {
         System.out.println("Test 3");
 
