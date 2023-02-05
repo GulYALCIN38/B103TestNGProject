@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/ASUS/IdeaProjects/B103TestNGProject/src/test/java/techproed/tests/smoketests">
+        <classes>
+            <class name="techproed.tests.smoketests.Day22_NegativeLoginTest">
+                <methods>
+                    <include name="US100208_Negative_Login"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.smoketests.Day22_PositiveLoginTest">
+                <methods>
+                    <include name="US100201_Admin_Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+<!--Smoke test e saga tiklayip xml dosyasi olustur
+xml i calistir
+Projeye tıkla > Run > Edit configuration
+Xml dosyasını sec > listeners > + a tikla > reports lari ekle
+APPLY > OK
+XML i run et
+Projeyi yenile
+test-output dosyasında raporlar cikmis olacak
+******************************
+Eclipse: test-output dosyası testng non xml raportlari otomatik olacak oluşur
+IntelliJ: bu dosyanın oluşması icin mini bir ayar gerekir-->
