@@ -20,6 +20,7 @@ public class Day23_ExcelLogin {
     ExcelUtils excelUtils;
     List<Map<String, String>> excelDatalari;
 
+
     public void login() {//logine gitme metodu
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
         // home page logine tikla
@@ -94,8 +95,6 @@ public class Day23_ExcelLogin {
 
             //her islem sonu ekran goruntusu aldik
             ReusableMethods.getScreenshot("EkranGoruntusu");
-
-
 
 
 

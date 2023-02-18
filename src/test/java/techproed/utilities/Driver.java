@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
+
 import java.time.Duration;
 public class Driver {
     //    Driver.getDriver(); -> driver
@@ -36,7 +38,9 @@ public class Driver {
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
+
+            driver.manage().window().maximize();
+
         return driver;
     }
     //    closeDriver() is used to close the driver

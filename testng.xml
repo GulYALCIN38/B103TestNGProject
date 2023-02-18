@@ -21,6 +21,10 @@
 xml i calistir
 Projeye tıkla > Run > Edit configuration
 Xml dosyasını sec > listeners > + a tikla > reports lari ekle
+org.testng.reporters.EmailableReporter
+org.testng.reporters.FailedReporter
+org.testng.reporters.SuiteHTMLReporter
+org.testng.reporters.TestHTMLReporter
 APPLY > OK
 XML i run et
 Projeyi yenile
